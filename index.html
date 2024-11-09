@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Usernames</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #usernameDisplay {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .random-names {
+            margin-top: 20px;
+        }
+        .random-names p {
+            font-size: 18px;
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Enter Username</h1>
+    <input type="text" id="usernameInput" placeholder="Enter your username">
+    <button onclick="submitUsername()">Submit</button>
+
+    <div id="usernameDisplay"></div>
+
+    <div class="random-names">
+        <h3>Users:</h3>
+        <p>Uday Surothiya</p>
+        <p>Bhavesh</p>
+        <p>Priyanshu</p>
+        <p>Geetanshu</p>
+        <p>Ayush</p>
+    </div>
+</div>
+
+<script>
+    function submitUsername() {
+        // Get the value from the input field
+        var username = document.getElementById('usernameInput').value;
+
+        // Display the entered username
+        var usernameDisplay = document.getElementById('usernameDisplay');
+        if (username) {
+            usernameDisplay.innerHTML = 'Hello, ' + username + '! Here are the users below:';
+        } else {
+            usernameDisplay.innerHTML = '';
+        }
+    }
+</script>
+
+</body>
+</html>
